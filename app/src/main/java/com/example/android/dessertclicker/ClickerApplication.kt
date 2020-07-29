@@ -1,4 +1,9 @@
 package com.example.android.dessertclicker
 
-class ClickerApplication {
+import android.app.Application
+
+class ClickerApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+    }
 }
