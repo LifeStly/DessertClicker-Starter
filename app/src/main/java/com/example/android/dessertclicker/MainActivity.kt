@@ -67,9 +67,10 @@ class MainActivity : AppCompatActivity() {
     )
     private var currentDessert = allDesserts[0]
 
-    override fun onCreate(savedInstanceState: Bundle) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Timber.i("onCreate called")
+
 
         // Use Data Binding to get reference to the views
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -85,10 +86,6 @@ class MainActivity : AppCompatActivity() {
                     savedInstanceState.getInt(KEY_TIMER_SECONDS, 0)
             showCurrentDessert()
         }
-
-
-
-
         // Set the TextViews to the right values
         binding.revenue = revenue
         binding.amountSold = dessertsSold
@@ -166,7 +163,9 @@ class MainActivity : AppCompatActivity() {
         if (newDessert != currentDessert) {
             currentDessert = newDessert
             binding.dessertButton.setImageResource(newDessert.imageId)
+
         }
+
     }
 
     /**
@@ -203,6 +202,7 @@ class MainActivity : AppCompatActivity() {
         outState.putInt(KEY_TIMER_SECONDS, dessertTimer.secondsCount)
 
         Timber.i("onSaveInstanceState Called")
+
     }
 
 }

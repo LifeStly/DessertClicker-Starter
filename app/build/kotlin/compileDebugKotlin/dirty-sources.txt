@@ -1,3 +1,0 @@
-C:\Users\MickyMouse\AndroidStudioProjects\DessertClicker-Starter\app\src\main\java\com\example\android\dessertclicker\ClickerApplication.kt
-C:\Users\MickyMouse\AndroidStudioProjects\DessertClicker-Starter\app\src\main\java\com\example\android\dessertclicker\DessertTimer.kt
-C:\Users\MickyMouse\AndroidStudioProjects\DessertClicker-Starter\app\src\main\java\com\example\android\dessertclicker\MainActivity.kt
