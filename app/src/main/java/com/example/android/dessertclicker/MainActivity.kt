@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+
 package com.example.android.dessertclicker
 
 import android.content.ActivityNotFoundException
@@ -27,6 +28,9 @@ import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import com.example.android.dessertclicker.databinding.ActivityMainBinding
 import timber.log.Timber
+const val KEY_REVENUE = "revenue_key"
+const val KEY_DESSERT_SOLD = "dessert_sold_key"
+const val KEY_TIMER_SECONDS = "timer_seconds_key"
 
 class MainActivity : AppCompatActivity() {
 
@@ -184,4 +188,10 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        Timber.i("onSaveInstanceState Called")
+    }
+
 }
