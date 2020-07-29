@@ -87,8 +87,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        dessertTimer.startTimer()
 
-        Timber.i("onCreate called")
+        Timber.i("onStart called")
     }
     override fun onResume() {
         super.onResume()
@@ -102,6 +103,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
+        dessertTimer.stopTimer()
+
         Timber.i("onStop Called")
     }
 
